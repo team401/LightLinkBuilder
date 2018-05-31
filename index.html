@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>LightLink Builder</title>
+
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 54px;
+      background: #eee;
+    }
+    
+    .navbar-orange {
+      background: #d35401
+    }
+    
+    .fixedbutton {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+    }
+    
+    .input:active {
+      background: #fff;
+    }
+    
+    @media (min-width: 992px) {
+      body {
+        padding-top: 56px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-orange">
+    <a class="navbar-brand" href="#">LightLink Builder</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <button type="button" class="btn btn-outline-light mr-2" id="addBtn">Add row</button>
+        <button type="button" class="btn btn-outline-light mr-2" id="removeBtn" disabled>Remove Row</button>
+        <button type="button" class="btn btn-outline-light" id="downloadBtn">Download</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center" id="cardHolder">
+        <div class="card mt-2">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-2">
+                <div class="input-group mb-1">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Pin #</span>
+                  </div>
+                  <input type="number" class="form-control pinNumber" placeholder="1" value="1">
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="input-group mb-1">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Strip Length</span>
+                  </div>
+                  <input type="number" class="form-control stripLength" placeholder="1" value="1">
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <label class="">
+                  <h6>Color Type</h6>
+                </label>
+                <div class="btn-group btn-group-toggle mb-1 typeBtns" data-toggle="buttons">
+                  <label class="btn btn-light grbw active">
+                    <input type="radio" name="ledType" id="option1" autocomplete="off" checked> GRBW
+                  </label>
+                  <label class="btn btn-light grb">
+                    <input type="radio" name="ledType" id="option2" autocomplete="off"> GRB
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <label class="">
+                  <h6>Strip Frequency</h6>
+                </label>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                  <label class="btn btn-light khz400 active">
+                    <input type="radio" name="frequency" id="khz400" autocomplete="off" checked> 400 KHz
+                  </label>
+                  <label class="btn btn-light khz800">
+                    <input type="radio" name="frequency" id="khz800" autocomplete="off"> 800 KHz
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="logic.js"></script>
+
+</body>
+
+</html>
