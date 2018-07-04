@@ -30,7 +30,7 @@ function dataFetch() {
     var pinVal = pinInputs[i].value;
     var stripLen = stripLengths[i].value;
     var ledType = grbwLeds[i].classList.contains("active") ? "GRBW" : "GRB";
-    var freq = khz400s[i].classList.contains("active") ? "KHZ_400" : "KHZ_800";
+    var freq = khz400s[i].classList.contains("active") ? "KHZ400" : "KHZ800";
 
     formattedStrings += "\taddStrip(" + pinVal + ", " + stripLen + ", NEO_" + ledType + " + NEO_" + freq + ");\n";
   }
